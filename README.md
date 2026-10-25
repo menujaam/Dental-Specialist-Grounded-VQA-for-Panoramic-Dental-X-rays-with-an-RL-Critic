@@ -169,7 +169,7 @@ pip install huggingface_hub
 hf download Qwen/Qwen2.5-VL-3B-Instruct
 
 # 3) model weights
-Download `outputs.zip` from the [v1.0 release](https://github.com/menujaam/<repo-name>/releases/tag/v1.0)
+Download `outputs.zip`and `runs.zip` from the [v1.0 release](https://github.com/menujaam/<repo-name>/releases/tag/v1.0)
 and unzip it into the repository folder, so you have `outputs/dental_lora_3b/final/` and
 `outputs/tooth_classifier/best.pt`.
 ```
