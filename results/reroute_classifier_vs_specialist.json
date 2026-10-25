@@ -1,0 +1,83 @@
+{
+  "train": {
+    "presence": {
+      "n": 364,
+      "specialist_acc": 0.8543956043956044,
+      "classifier_acc": 0.9505494505494505
+    },
+    "which_teeth": {
+      "n": 364,
+      "specialist_acc": 0.11263736263736264,
+      "classifier_acc": 0.21153846153846154
+    },
+    "which_quadrant": {
+      "n": 364,
+      "specialist_acc": 0.2664835164835165,
+      "classifier_acc": 0.6785714285714286
+    },
+    "tooth_diagnosis": {
+      "n": 337,
+      "specialist_acc": 0.827893175074184,
+      "classifier_acc": 0.8931750741839762
+    },
+    "caries_depth": {
+      "n": 339,
+      "specialist_acc": 0.8053097345132744,
+      "classifier_acc": 0.967551622418879
+    }
+  },
+  "val": {
+    "presence": {
+      "n": 145,
+      "specialist_acc": 0.7448275862068966,
+      "classifier_acc": 0.8413793103448276
+    },
+    "which_teeth": {
+      "n": 145,
+      "specialist_acc": 0.06896551724137931,
+      "classifier_acc": 0.1310344827586207
+    },
+    "which_quadrant": {
+      "n": 144,
+      "specialist_acc": 0.25,
+      "classifier_acc": 0.4097222222222222
+    },
+    "tooth_diagnosis": {
+      "n": 131,
+      "specialist_acc": 0.7557251908396947,
+      "classifier_acc": 0.7633587786259542
+    },
+    "caries_depth": {
+      "n": 128,
+      "specialist_acc": 0.828125,
+      "classifier_acc": 0.7890625
+    }
+  },
+  "test": {
+    "presence": {
+      "n": 456,
+      "specialist_acc": 0.793859649122807,
+      "classifier_acc": 0.868421052631579
+    },
+    "which_teeth": {
+      "n": 221,
+      "specialist_acc": 0.07239819004524888,
+      "classifier_acc": 0.1085972850678733
+    },
+    "which_quadrant": {
+      "n": 221,
+      "specialist_acc": 0.22171945701357465,
+      "classifier_acc": 0.42081447963800905
+    },
+    "tooth_diagnosis": {
+      "n": 517,
+      "specialist_acc": 0.7911025145067698,
+      "classifier_acc": 0.7852998065764023
+    },
+    "caries_depth": {
+      "n": 404,
+      "specialist_acc": 0.8143564356435643,
+      "classifier_acc": 0.849009900990099
+    }
+  }
+}

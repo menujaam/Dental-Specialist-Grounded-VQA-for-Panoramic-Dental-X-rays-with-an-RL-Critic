@@ -1,0 +1,193 @@
+{
+  "tooth_boxes": {
+    "counts": {
+      "one tooth off": 67,
+      "right tooth (IoU >= 0.5)": 61,
+      "right tooth, box too loose/tight (IoU < 0.5)": 23,
+      "2+ teeth off, same jaw": 10,
+      "missing tooth: correctly said not present": 26,
+      "said 'not present' / no box although the tooth exists": 27,
+      "missing tooth: model drew a box anyway": 15,
+      "box not on any tooth": 2
+    },
+    "n_present": 190,
+    "by_tooth_type": {
+      "front teeth (incisors)": {
+        "wrong": 35,
+        "right": 17
+      },
+      "wisdom teeth": {
+        "right": 1,
+        "wrong": 11
+      },
+      "premolars": {
+        "right": 13,
+        "wrong": 33
+      },
+      "molars": {
+        "wrong": 32,
+        "right": 19
+      },
+      "canines": {
+        "right": 11,
+        "wrong": 18
+      }
+    }
+  },
+  "diagnosis_boxes": {
+    "found": {
+      "caries": 213,
+      "deep caries": 47,
+      "impacted": 93,
+      "periapical lesion": 7
+    },
+    "missed": {
+      "deep caries": 256,
+      "caries": 487,
+      "periapical lesion": 41,
+      "impacted": 127
+    },
+    "extra": {
+      "caries": 559,
+      "deep caries": 68,
+      "impacted": 63,
+      "periapical lesion": 8
+    },
+    "wrong_label": {
+      "deep caries called caries": 37,
+      "caries called deep caries": 25,
+      "deep caries called impacted": 5,
+      "caries called impacted": 8,
+      "periapical lesion called caries": 6,
+      "caries called periapical lesion": 1,
+      "impacted called deep caries": 3,
+      "impacted called caries": 4,
+      "deep caries called periapical lesion": 1,
+      "periapical lesion called impacted": 1
+    },
+    "wrong_tooth_number": {
+      "caries": 72,
+      "deep caries": 10,
+      "periapical lesion": 4
+    }
+  },
+  "duplicates": {
+    "answers_with_duplicates": 9,
+    "before": {
+      "ground_diagnosis": {
+        "recall_at_0_5": 21.9,
+        "precision_at_0_5": 34.5,
+        "n_model_boxes": 455
+      },
+      "ground_all": {
+        "recall_at_0_5": 35.9,
+        "precision_at_0_5": 35.9,
+        "n_model_boxes": 604
+      },
+      "ground_tooth": {
+        "recall_at_0_5": 32.1,
+        "precision_at_0_5": 37.4,
+        "n_model_boxes": 163
+      }
+    },
+    "after": {
+      "ground_diagnosis": {
+        "recall_at_0_5": 21.9,
+        "precision_at_0_5": 34.1,
+        "n_model_boxes": 449
+      },
+      "ground_all": {
+        "recall_at_0_5": 35.9,
+        "precision_at_0_5": 35.9,
+        "n_model_boxes": 587
+      },
+      "ground_tooth": {
+        "recall_at_0_5": 32.1,
+        "precision_at_0_5": 37.4,
+        "n_model_boxes": 163
+      }
+    }
+  },
+  "diagnosis_mixups": {
+    "pairs": {
+      "caries -> caries": 340,
+      "impacted -> impacted": 98,
+      "deep caries -> caries": 89,
+      "periapical lesion -> caries": 19,
+      "impacted -> caries": 11,
+      "caries -> impacted": 7,
+      "deep caries -> impacted": 6,
+      "periapical lesion -> nothing": 5,
+      "deep caries -> nothing": 4,
+      "caries -> nothing": 3,
+      "impacted -> nothing": 1
+    },
+    "added": {}
+  },
+  "presence": {
+    "caries": {
+      "ok": 108,
+      "invented (said yes)": 6
+    },
+    "deep caries": {
+      "missed (said no)": 37,
+      "ok": 63,
+      "invented (said yes)": 14
+    },
+    "periapical lesion": {
+      "missed (said no)": 19,
+      "ok": 95
+    },
+    "impacted": {
+      "ok": 92,
+      "missed (said no)": 15,
+      "invented (said yes)": 7
+    }
+  },
+  "caries_depth": {
+    "not deep -> not deep": 346,
+    "deep -> not deep": 99
+  },
+  "tooth_present": {
+    "premolars": {
+      "ok": 57,
+      "said present, but missing": 15,
+      "said missing, but present": 1
+    },
+    "molars": {
+      "ok": 61,
+      "said present, but missing": 19,
+      "said missing, but present": 3
+    },
+    "wisdom teeth": {
+      "ok": 63,
+      "said present, but missing": 12,
+      "said missing, but present": 5
+    },
+    "front teeth (incisors)": {
+      "ok": 56,
+      "said present, but missing": 4
+    },
+    "canines": {
+      "ok": 18,
+      "said present, but missing": 4
+    }
+  },
+  "counting_error": {
+    "+0": 187,
+    "-1": 133,
+    "+1": 44,
+    "+3": 2,
+    "+2": 8,
+    "-2": 3,
+    "+4": 1,
+    "-7": 1,
+    "-4": 1
+  },
+  "which_teeth": {
+    "missed teeth only": 17,
+    "exactly right": 17,
+    "both missed and extra": 157,
+    "extra teeth only": 30
+  }
+}

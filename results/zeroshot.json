@@ -1,0 +1,207 @@
+{
+  "main": {
+    "n": 3578,
+    "per_qtype": {
+      "tooth_present": {
+        "n": 318,
+        "accuracy": 0.2830188679245283,
+        "macro_f1": 0.27965470127934416,
+        "unparsed": 0.34591194968553457
+      },
+      "count_quadrant": {
+        "n": 380,
+        "mae": 19.826330532212886,
+        "exact": 0.007894736842105263
+      },
+      "ground_tooth": {
+        "n": 231,
+        "n_pos": 190,
+        "mean_best_iou": 0.0,
+        "recall_at_0_5": 0.0,
+        "precision_at_0_5": 0.0,
+        "pointing_game": 0.0,
+        "recall_at_0_5_correct_tooth": 0.0,
+        "n_neg": 41,
+        "false_box_rate": 0.0
+      },
+      "report": {
+        "n": 209,
+        "finding_pair_f1": 0.014090909090909091,
+        "rougeL": 0.07628214849531079,
+        "bleu": 0.11333858915668142
+      },
+      "absent": {
+        "n": 77,
+        "hallucination_rate": 0.922077922077922
+      },
+      "presence": {
+        "n": 456,
+        "accuracy": 0.3969298245614035,
+        "macro_f1": 0.3565439964498542,
+        "unparsed": 0.31798245614035087,
+        "acc_caries": 0.017543859649122806,
+        "acc_deep_caries": 0.18421052631578946,
+        "acc_periapical_lesion": 0.7807017543859649,
+        "acc_impacted": 0.6052631578947368
+      },
+      "which_teeth": {
+        "n": 221,
+        "exact_match": 0.0,
+        "set_f1": 0.05837790543000468
+      },
+      "which_quadrant": {
+        "n": 221,
+        "exact_match": 0.0,
+        "set_f1": 0.0
+      },
+      "ground_diagnosis": {
+        "n": 343,
+        "n_pos": 221,
+        "mean_best_iou": 0.07786463993224851,
+        "recall_at_0_5": 0.014577259475218658,
+        "precision_at_0_5": 0.03374233128834356,
+        "pointing_game": 0.06334841628959276,
+        "recall_at_0_5_correct_tooth": 0.0,
+        "n_neg": 122,
+        "false_box_rate": 0.5573770491803278
+      },
+      "tooth_diagnosis": {
+        "n": 563,
+        "exact_match": 0.3268206039076377,
+        "set_f1": 0.33481349911190056
+      },
+      "caries_depth": {
+        "n": 445,
+        "accuracy": 0.15730337078651685,
+        "macro_f1": 0.18703746530989823,
+        "unparsed": 0.32808988764044944
+      },
+      "ground_all": {
+        "n": 114,
+        "n_pos": 110,
+        "mean_best_iou": 0.16089723166925113,
+        "recall_at_0_5": 0.02905982905982906,
+        "precision_at_0_5": 0.04966887417218543,
+        "pointing_game": 0.18181818181818182,
+        "recall_at_0_5_correct_tooth": 0.0,
+        "n_neg": 4,
+        "false_box_rate": 1.0
+      }
+    },
+    "acs": {
+      "quadrant_estimated_axes": 0.2702702702702703,
+      "quadrant_image_centre": 0.31981981981981983,
+      "tooth_level": 0.028985507246376812,
+      "n_boxes": 222
+    },
+    "accuracy_by_level": {
+      "L1": 0.35012919896640826,
+      "L2": 0.13501805054151625,
+      "L3": 0.15730337078651685
+    },
+    "closed_accuracy": 0.20276497695852536
+  },
+  "blind": {
+    "n": 3578,
+    "per_qtype": {
+      "tooth_present": {
+        "n": 318,
+        "accuracy": 0.4371069182389937,
+        "macro_f1": 0.3797918948521358,
+        "unparsed": 0.0031446540880503146
+      },
+      "count_quadrant": {
+        "n": 380,
+        "mae": 16.78014184397163,
+        "exact": 0.005263157894736842
+      },
+      "ground_tooth": {
+        "n": 231,
+        "n_pos": 190,
+        "mean_best_iou": 0.0,
+        "recall_at_0_5": 0.0,
+        "precision_at_0_5": 0.0,
+        "pointing_game": 0.0,
+        "recall_at_0_5_correct_tooth": 0.0,
+        "n_neg": 41,
+        "false_box_rate": 0.3170731707317073
+      },
+      "report": {
+        "n": 209,
+        "finding_pair_f1": 0.05195254685896397,
+        "rougeL": 0.07475278953962403,
+        "bleu": 0.04052527748883502
+      },
+      "absent": {
+        "n": 77,
+        "hallucination_rate": 0.6493506493506493
+      },
+      "presence": {
+        "n": 456,
+        "accuracy": 0.5723684210526315,
+        "macro_f1": 0.5004690826765239,
+        "unparsed": 0.0,
+        "acc_caries": 0.34210526315789475,
+        "acc_deep_caries": 0.4824561403508772,
+        "acc_periapical_lesion": 0.8333333333333334,
+        "acc_impacted": 0.631578947368421
+      },
+      "which_teeth": {
+        "n": 221,
+        "exact_match": 0.004524886877828055,
+        "set_f1": 0.09783067094086523
+      },
+      "which_quadrant": {
+        "n": 221,
+        "exact_match": 0.0,
+        "set_f1": 0.0
+      },
+      "ground_diagnosis": {
+        "n": 343,
+        "n_pos": 221,
+        "mean_best_iou": 0.0,
+        "recall_at_0_5": 0.0,
+        "precision_at_0_5": 0.0,
+        "pointing_game": 0.0,
+        "recall_at_0_5_correct_tooth": 0.0,
+        "n_neg": 122,
+        "false_box_rate": 0.9098360655737705
+      },
+      "tooth_diagnosis": {
+        "n": 563,
+        "exact_match": 0.35346358792184723,
+        "set_f1": 0.3638247483718176
+      },
+      "caries_depth": {
+        "n": 445,
+        "accuracy": 0.39775280898876403,
+        "macro_f1": 0.40062842393020903,
+        "unparsed": 0.056179775280898875
+      },
+      "ground_all": {
+        "n": 114,
+        "n_pos": 110,
+        "mean_best_iou": 0.0,
+        "recall_at_0_5": 0.0,
+        "precision_at_0_5": 0.0,
+        "pointing_game": 0.0,
+        "recall_at_0_5_correct_tooth": 0.0,
+        "n_neg": 4,
+        "false_box_rate": 1.0
+      }
+    },
+    "acs": {
+      "quadrant_estimated_axes": 0.42105263157894735,
+      "quadrant_image_centre": 0.42105263157894735,
+      "tooth_level": 0.0,
+      "n_boxes": 361
+    },
+    "accuracy_by_level": {
+      "L1": 0.5167958656330749,
+      "L2": 0.14584837545126353,
+      "L3": 0.39775280898876403
+    },
+    "closed_accuracy": 0.2991551459293395
+  },
+  "image_reliance_gap_blind": -0.09639016897081415
+}

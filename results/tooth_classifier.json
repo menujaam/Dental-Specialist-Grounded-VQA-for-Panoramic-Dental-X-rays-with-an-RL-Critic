@@ -1,0 +1,101 @@
+{
+  "n_test_crops": 3210,
+  "thresholds": {
+    "caries": 0.6,
+    "deep caries": 0.9,
+    "periapical lesion": 0.95,
+    "impacted": 0.9
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.8154326440093258,
+      "val_macro_auroc": 0.8834721920874238
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.617818374029813,
+      "val_macro_auroc": 0.9037294422201356
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.5021873154159131,
+      "val_macro_auroc": 0.9044909817841658
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.41348047656917786,
+      "val_macro_auroc": 0.9197241130329452
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.32720510615345644,
+      "val_macro_auroc": 0.9234271313384218
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.2831557615765447,
+      "val_macro_auroc": 0.9271238972470198
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.21851046029024007,
+      "val_macro_auroc": 0.9279084311951109
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.18120412341011338,
+      "val_macro_auroc": 0.9245771553061275
+    },
+    {
+      "epoch": 9,
+      "train_loss": 0.1512764835701285,
+      "val_macro_auroc": 0.9236407573651237
+    },
+    {
+      "epoch": 10,
+      "train_loss": 0.13348318184178712,
+      "val_macro_auroc": 0.920925926576021
+    },
+    {
+      "epoch": 11,
+      "train_loss": 0.11598875781649232,
+      "val_macro_auroc": 0.9212466691084918
+    },
+    {
+      "epoch": 12,
+      "train_loss": 0.11384098747220642,
+      "val_macro_auroc": 0.9210795431236695
+    }
+  ],
+  "per_class": {
+    "caries": {
+      "n_pos": 398,
+      "auroc": 0.8635353152676613,
+      "precision": 0.4269870609981516,
+      "recall": 0.5804020100502513,
+      "f1": 0.4920127795527157
+    },
+    "deep caries": {
+      "n_pos": 116,
+      "auroc": 0.9241357020261686,
+      "precision": 0.5478260869565217,
+      "recall": 0.5431034482758621,
+      "f1": 0.5454545454545454
+    },
+    "periapical lesion": {
+      "n_pos": 31,
+      "auroc": 0.9430029731402653,
+      "precision": 0.3939393939393939,
+      "recall": 0.41935483870967744,
+      "f1": 0.40625
+    },
+    "impacted": {
+      "n_pos": 158,
+      "auroc": 0.9920056572158534,
+      "precision": 0.7631578947368421,
+      "recall": 0.9177215189873418,
+      "f1": 0.8333333333333334
+    }
+  }
+}

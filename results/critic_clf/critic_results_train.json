@@ -1,0 +1,285 @@
+{
+  "reward": {
+    "alpha": 0.5,
+    "beta": 0.05,
+    "gamma": 1.0,
+    "delta": 0.5,
+    "area_frac": 0.25,
+    "area_penalty": 1.0
+  },
+  "K": 3,
+  "train_on": "train",
+  "rule_thresholds": {
+    "tau_abstain": 0.7,
+    "tau_acs": 1.01
+  },
+  "results": {
+    "no_critic": {
+      "n": 3369,
+      "mean_reward": 0.21071507515845755,
+      "accuracy_overall": 0.5841495992876224,
+      "coverage": 1.0,
+      "selective_accuracy": 0.5841495992876224,
+      "abstention_rate": 0.0,
+      "abstention_precision": null,
+      "missed_error_rate": 1.0,
+      "wrong_accepted_rate": 0.41585040071237755,
+      "mean_steps": 0.0,
+      "reground_rate": 0.0,
+      "reroute_rate": 0.0,
+      "hallucination_rate": 0.1038961038961039,
+      "mean_G_accepted_grounding": 0.41540432618849826,
+      "accuracy_by_qtype": {
+        "absent": 0.8961038961038961,
+        "caries_depth": 0.7775280898876404,
+        "count_quadrant": 0.4921052631578947,
+        "ground_all": 0.18421052631578946,
+        "ground_diagnosis": 0.4198250728862974,
+        "ground_tooth": 0.39826839826839827,
+        "presence": 0.793859649122807,
+        "tooth_diagnosis": 0.7584369449378331,
+        "tooth_present": 0.8018867924528302,
+        "which_quadrant": 0.22171945701357465,
+        "which_teeth": 0.07239819004524888
+      }
+    },
+    "tools_rule": {
+      "n": 3369,
+      "mean_reward": 0.3681728262929772,
+      "accuracy_overall": 0.6539032353814188,
+      "coverage": 1.0,
+      "selective_accuracy": 0.6539032353814188,
+      "abstention_rate": 0.0,
+      "abstention_precision": null,
+      "missed_error_rate": 0.8322626695217702,
+      "wrong_accepted_rate": 0.3460967646185812,
+      "mean_steps": 0.20421490056396557,
+      "reground_rate": 0.20421490056396557,
+      "reroute_rate": 0.0,
+      "hallucination_rate": 0.1038961038961039,
+      "mean_G_accepted_grounding": 0.6912042202937211,
+      "accuracy_by_qtype": {
+        "absent": 0.8961038961038961,
+        "caries_depth": 0.7775280898876404,
+        "count_quadrant": 0.4921052631578947,
+        "ground_all": 0.5350877192982456,
+        "ground_diagnosis": 0.6501457725947521,
+        "ground_tooth": 0.9004329004329005,
+        "presence": 0.793859649122807,
+        "tooth_diagnosis": 0.7584369449378331,
+        "tooth_present": 0.8018867924528302,
+        "which_quadrant": 0.22171945701357465,
+        "which_teeth": 0.07239819004524888
+      }
+    },
+    "rule": {
+      "n": 3369,
+      "mean_reward": 0.4191226439872783,
+      "accuracy_overall": 0.5007420599584447,
+      "coverage": 0.6904125853368952,
+      "selective_accuracy": 0.7252794496990542,
+      "abstention_rate": 0.3095874146631048,
+      "abstention_precision": 0.5052732502396932,
+      "missed_error_rate": 0.45610278372591007,
+      "wrong_accepted_rate": 0.18967052537845058,
+      "mean_steps": 0.20421490056396557,
+      "reground_rate": 0.20421490056396557,
+      "reroute_rate": 0.0,
+      "hallucination_rate": 0.07792207792207792,
+      "mean_G_accepted_grounding": 0.7064093591263918,
+      "accuracy_by_qtype": {
+        "absent": 0.8961038961038961,
+        "caries_depth": 0.698876404494382,
+        "count_quadrant": 0.25,
+        "ground_all": 0.4649122807017544,
+        "ground_diagnosis": 0.282798833819242,
+        "ground_tooth": 0.5800865800865801,
+        "presence": 0.6118421052631579,
+        "tooth_diagnosis": 0.6873889875666075,
+        "tooth_present": 0.6446540880503144,
+        "which_quadrant": 0.22171945701357465,
+        "which_teeth": 0.03619909502262444
+      }
+    },
+    "supervised": {
+      "n": 3369,
+      "mean_reward": 0.6812301743178519,
+      "accuracy_overall": 0.672009498367468,
+      "coverage": 0.7919263876521223,
+      "selective_accuracy": 0.848575712143928,
+      "abstention_rate": 0.20807361234787772,
+      "abstention_precision": 0.8245363766048502,
+      "missed_error_rate": 0.2883654532476802,
+      "wrong_accepted_rate": 0.1199168892846542,
+      "mean_steps": 0.3466904125853369,
+      "reground_rate": 0.25111308993766696,
+      "reroute_rate": 0.09557732264766994,
+      "hallucination_rate": 0.012987012987012988,
+      "mean_G_accepted_grounding": 0.7149106897791728,
+      "accuracy_by_qtype": {
+        "absent": 0.935064935064935,
+        "caries_depth": 0.7595505617977528,
+        "count_quadrant": 0.6526315789473685,
+        "ground_all": 0.42105263157894735,
+        "ground_diagnosis": 0.565597667638484,
+        "ground_tooth": 0.8528138528138528,
+        "presence": 0.8442982456140351,
+        "tooth_diagnosis": 0.7371225577264654,
+        "tooth_present": 0.8930817610062893,
+        "which_quadrant": 0.2669683257918552,
+        "which_teeth": 0.1085972850678733
+      }
+    },
+    "rl_ppo": {
+      "n": 3369,
+      "mean_reward": 0.6656201400359276,
+      "accuracy_overall": 0.695161769070941,
+      "coverage": 0.8450578806767587,
+      "selective_accuracy": 0.8226203020723568,
+      "abstention_rate": 0.1549421193232413,
+      "abstention_precision": 0.8601532567049809,
+      "missed_error_rate": 0.36045681655960027,
+      "wrong_accepted_rate": 0.14989611160581776,
+      "mean_steps": 0.3371920451172455,
+      "reground_rate": 0.3033541110121698,
+      "reroute_rate": 0.03383793410507569,
+      "hallucination_rate": 0.012987012987012988,
+      "mean_G_accepted_grounding": 0.6912042202937211,
+      "accuracy_by_qtype": {
+        "absent": 0.987012987012987,
+        "caries_depth": 0.7842696629213484,
+        "count_quadrant": 0.8026315789473685,
+        "ground_all": 0.5350877192982456,
+        "ground_diagnosis": 0.6501457725947521,
+        "ground_tooth": 0.9004329004329005,
+        "presence": 0.8728070175438597,
+        "tooth_diagnosis": 0.7140319715808171,
+        "tooth_present": 0.89937106918239,
+        "which_quadrant": 0.11764705882352941,
+        "which_teeth": 0.03619909502262444
+      }
+    },
+    "oracle": {
+      "n": 3369,
+      "mean_reward": 0.9568107679726007,
+      "accuracy_overall": 0.8106262986049273,
+      "coverage": 0.8106262986049273,
+      "selective_accuracy": 1.0,
+      "abstention_rate": 0.18937370139507273,
+      "abstention_precision": 1.0,
+      "missed_error_rate": 0.0,
+      "wrong_accepted_rate": 0.0,
+      "mean_steps": 0.22647669931730482,
+      "reground_rate": 0.20184030869694272,
+      "reroute_rate": 0.024636390620362124,
+      "hallucination_rate": 0.0,
+      "mean_G_accepted_grounding": 0.801687414013984,
+      "accuracy_by_qtype": {
+        "absent": 0.987012987012987,
+        "caries_depth": 0.8853932584269663,
+        "count_quadrant": 0.8868421052631579,
+        "ground_all": 0.5701754385964912,
+        "ground_diagnosis": 0.7201166180758017,
+        "ground_tooth": 0.935064935064935,
+        "presence": 0.9407894736842105,
+        "tooth_diagnosis": 0.8561278863232682,
+        "tooth_present": 0.9622641509433962,
+        "which_quadrant": 0.5701357466063348,
+        "which_teeth": 0.2398190045248869
+      }
+    }
+  },
+  "ppo_history": [
+    {
+      "iter": 10,
+      "val_reward": 0.5766355073613544,
+      "val_coverage": 0.7793333333333333,
+      "val_selective_acc": 0.7639007698887939
+    },
+    {
+      "iter": 20,
+      "val_reward": 0.5849688406946878,
+      "val_coverage": 0.7933333333333333,
+      "val_selective_acc": 0.7663865546218488
+    },
+    {
+      "iter": 30,
+      "val_reward": 0.584302174028021,
+      "val_coverage": 0.802,
+      "val_selective_acc": 0.7664172901080631
+    },
+    {
+      "iter": 40,
+      "val_reward": 0.5965688406946877,
+      "val_coverage": 0.802,
+      "val_selective_acc": 0.773067331670823
+    },
+    {
+      "iter": 50,
+      "val_reward": 0.5951355073613545,
+      "val_coverage": 0.8026666666666666,
+      "val_selective_acc": 0.771594684385382
+    },
+    {
+      "iter": 60,
+      "val_reward": 0.5981355073613543,
+      "val_coverage": 0.802,
+      "val_selective_acc": 0.773067331670823
+    },
+    {
+      "iter": 70,
+      "val_reward": 0.5889688406946877,
+      "val_coverage": 0.8086666666666666,
+      "val_selective_acc": 0.7675185490519374
+    },
+    {
+      "iter": 80,
+      "val_reward": 0.5864789800085981,
+      "val_coverage": 0.8153333333333334,
+      "val_selective_acc": 0.7653311529026983
+    },
+    {
+      "iter": 90,
+      "val_reward": 0.5874871043209676,
+      "val_coverage": 0.8106666666666666,
+      "val_selective_acc": 0.7664473684210527
+    },
+    {
+      "iter": 100,
+      "val_reward": 0.5815160480733842,
+      "val_coverage": 0.812,
+      "val_selective_acc": 0.7619047619047619
+    },
+    {
+      "iter": 110,
+      "val_reward": 0.57577733600309,
+      "val_coverage": 0.8106666666666666,
+      "val_selective_acc": 0.7582236842105263
+    },
+    {
+      "iter": 120,
+      "val_reward": 0.5841162089344554,
+      "val_coverage": 0.8073333333333333,
+      "val_selective_acc": 0.763831544178365
+    },
+    {
+      "iter": 130,
+      "val_reward": 0.5835658902997737,
+      "val_coverage": 0.8093333333333333,
+      "val_selective_acc": 0.7635914332784185
+    },
+    {
+      "iter": 140,
+      "val_reward": 0.5879325569664403,
+      "val_coverage": 0.8086666666666666,
+      "val_selective_acc": 0.7666941467436109
+    },
+    {
+      "iter": 150,
+      "val_reward": 0.5946274598745799,
+      "val_coverage": 0.798,
+      "val_selective_acc": 0.7719298245614035
+    }
+  ],
+  "beta_sweep": []
+}
