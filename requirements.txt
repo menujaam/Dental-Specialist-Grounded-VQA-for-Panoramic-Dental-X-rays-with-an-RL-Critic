@@ -1,0 +1,18 @@
+torch>=2.2
+transformers>=4.49        # Qwen2.5-VL support
+accelerate>=0.33
+peft>=0.12
+bitsandbytes>=0.43        # only for --load_in_4bit
+qwen-vl-utils
+pillow
+numpy
+pandas
+scikit-learn
+scipy
+pyyaml
+tqdm
+rouge-score
+sacrebleu
+# optional
+# flash-attn              # faster training if your GPU supports it
+# ultralytics             # FracAtlas detector (AGPL-3.0)

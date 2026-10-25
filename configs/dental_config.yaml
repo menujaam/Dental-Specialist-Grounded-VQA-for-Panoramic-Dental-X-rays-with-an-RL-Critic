@@ -1,0 +1,77 @@
+# ---------------------------------------------------------------------------
+# Dental specialist configuration (DENTEX + Tufts Dental).
+# Run scripts/00_inspect_dataset.py first and adjust the Tufts paths below.
+# ---------------------------------------------------------------------------
+paths:
+  dentex_root: data/raw/DENTEX          # folder containing training_data/... (searched recursively)
+  tufts_root: data/raw/TuftsDental      # optional; leave as-is if you don't have access yet
+  processed: data/processed
+
+image:
+  # Panoramic X-rays are wide and caries are small, so the pixel budget is higher than for MSK.
+  # 802816 = 1024*28*28 (~1340x600 for a typical panoramic). Lower to 401408 if memory is tight.
+  min_pixels: 3136
+  max_pixels: 802816
+
+dentex:
+  use_subsets: [disease, enumeration]   # "quadrant"-only subset is skipped (no tooth numbers)
+  diagnosis_names:                      # raw category name (lower-case) -> canonical
+    "caries": caries
+    "deep caries": deep caries
+    "periapical lesion": periapical lesion
+    "impacted": impacted
+    "impacted tooth": impacted
+
+tufts:
+  enabled: true
+  # Paths are relative to tufts_root. CHECK them with scripts/00_inspect_dataset.py.
+  radiographs_dir: Radiographs
+  abnormality_mask_dir: Expert/mask
+  gaze_dir: Expert/gaze_map
+  description_json: Expert/expert.json
+  description_image_keys: ["External ID", "image", "Image", "file_name", "filename", "image_name"]
+  description_text_keys: ["Description", "description", "text", "Text", "report"]
+  mask_min_area: 150            # pixels (after resizing) for a mask component to become a box
+  convert_universal_to_fdi: false   # Tufts (US) may use Universal 1-32 numbering; set true after checking
+
+splits:
+  train: 0.70
+  val: 0.15
+  test: 0.15
+  seed: 42
+
+vqa:
+  seed: 0
+  train_paraphrases: 2
+  tooth_present_per_image: 4    # enumeration subset: balanced present / missing teeth
+  ground_tooth_per_image: 2
+  absent_prob: 0.4              # adversarial "missing / non-existent tooth" question
+
+train:
+  model: Qwen/Qwen2.5-VL-3B-Instruct
+  output_dir: outputs/dental_lora_3b
+  load_in_4bit: false
+  lora_r: 16
+  lora_alpha: 32
+  lora_dropout: 0.05
+  lr: 1.0e-4
+  epochs: 1
+  batch_size: 1
+  grad_accum: 16
+  meta_dropout: 0.0             # dental datasets have no patient metadata
+  eval_subset: 400
+  eval_steps: 200
+
+eval:
+  max_new_tokens: 256           # grounding answers list many boxes
+  batch_size: 4
+
+acs:
+  # Panoramics are displayed facing the patient: patient's right (Q1, Q4) is on the image LEFT.
+  midline_frac: 0.5             # fallback midline (fraction of width) when it can't be estimated
+  occlusal_frac: 0.5            # fallback occlusal plane (fraction of height)
+  tooth_iou: 0.3                # tooth-level ACS: IoU with the gold box of the named tooth
+
+gaze:
+  last_n_layers: 8              # attention layers averaged for the model heatmap
+  fixation_top_percent: 5       # top-% gaze pixels treated as "fixations" for NSS
